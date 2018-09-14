@@ -1,24 +1,12 @@
 public class Rocket implements SpaceShip {
-    private int cost; // cost in millions
-    private int cargoCarried; // weight in kg
-    private int cargoLimit; // weight in kg
+    int cost; // cost in millions
+    int cargoCarried; // weight in kg
+    int cargoLimit; // weight in kg
 
     Rocket(int cost, int cargoCarried, int cargoLimit){
         this.cost = cost;
         this.cargoCarried = cargoCarried;
         this.cargoLimit = cargoLimit;
-    }
-
-    public int getCost(){
-        return cost;
-    }
-
-    public int getCargoCarried(){
-        return cargoCarried;
-    }
-
-    public int getCargoLimit(){
-        return cargoLimit;
     }
 
     public boolean launch(){

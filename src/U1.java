@@ -1,7 +1,4 @@
 public class U1 extends Rocket{
-    private int cost;
-    private int cargoCarried;
-    private int cargoLimit;
 
     U1(){
         super(100, 0, 7258);
