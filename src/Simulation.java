@@ -66,7 +66,7 @@ public class Simulation {
         return U2rockets;
     }
 
-    public int runSimulation(ArrayList<Rocket> rockets){
+    public int runSimulation(ArrayList<? extends Rocket> rockets){
         int budget = 0;
         for (Rocket rocket : rockets){
             budget += rocket.cost;
