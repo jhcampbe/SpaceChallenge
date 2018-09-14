@@ -4,15 +4,26 @@ import java.util.*;
 public class Simulation {
 
     public ArrayList<Item> loadItems(){
-        File file = new File("phase-1.txt");
-        Scanner scanner = null;
+        File file1 = new File("phase-1.txt");
+        Scanner scanner1 = null;
+        File file2 = new File("phase-2.txt");
+        Scanner scanner2 = null;
         try{
-            scanner = new Scanner(file);
+            scanner1 = new Scanner(file1);
+            scanner2 = new Scanner(file2);
         } catch (FileNotFoundException exception){
             System.out.println("File not found.");
 
         }
 
+        ArrayList<Item> items = new ArrayList<>();
+        items.addAll(getItems(scanner1));
+        items.addAll(getItems(scanner2));
+        return items;
+
+    }
+
+    private static ArrayList<Item> getItems(Scanner scanner){
         ArrayList<Item> items = new ArrayList<>();
         while (scanner.hasNextLine()){
             String[] data = scanner.nextLine().split("=");
@@ -23,7 +34,6 @@ public class Simulation {
         }
 
         return items;
-
     }
 
     public ArrayList<U1> loadU1(ArrayList<Item> items){
