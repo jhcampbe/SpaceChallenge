@@ -40,7 +40,12 @@ public class Simulation {
         int i = 0;
         ArrayList<U1> U1rockets = new ArrayList<>();
         while (i < items.size()){
+            System.out.println(i);
             U1 u1 = new U1();
+            if (!u1.canCarry(items.get(i))){ // if empty rocket can't carry item, discard item and proceed to next item
+                i++;
+                continue;
+            }
             while(i < items.size() && u1.canCarry(items.get(i))){
                 u1.carry(items.get(i));
                 i++;
@@ -56,6 +61,10 @@ public class Simulation {
         ArrayList<U2> U2rockets = new ArrayList<>();
         while (i < items.size()){
             U2 u2 = new U2();
+            if (!u2.canCarry(items.get(i))){ // if empty rocket can't carry item, discard item and proceed to next item
+                i++;
+                continue;
+            }
             while(i < items.size() && u2.canCarry(items.get(i))){
                 u2.carry(items.get(i));
                 i++;
