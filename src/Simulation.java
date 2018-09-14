@@ -40,7 +40,6 @@ public class Simulation {
         int i = 0;
         ArrayList<U1> U1rockets = new ArrayList<>();
         while (i < items.size()){
-            System.out.println(i);
             U1 u1 = new U1();
             if (!u1.canCarry(items.get(i))){ // if empty rocket can't carry item, discard item and proceed to next item
                 i++;
