@@ -1,5 +1,21 @@
 public class Item {
-    String name;
-    int weight;
+    private String name;
+    private int weight;
+
+    public String getName(){
+        return name;
+    }
+
+    public int getWeight(){
+        return weight;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setWeight(int weight){
+        this.weight = weight;
+    }
 
 }
