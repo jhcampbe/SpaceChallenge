@@ -9,6 +9,18 @@ public class Rocket implements SpaceShip {
         this.cargoLimit = cargoLimit;
     }
 
+    public int getCost(){
+        return cost;
+    }
+
+    public int getCargoCarried(){
+        return cargoCarried;
+    }
+
+    public int getCargoLimit(){
+        return cargoLimit;
+    }
+
     public boolean launch(){
         return true;
     }
