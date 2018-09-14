@@ -14,6 +14,9 @@ public class Simulation {
         }
 
         while (scanner.hasNextLine()){
+//            String[] data = scanner.nextLine().split("=");
+//            Item item = new Item();
+
         }
 
     }
