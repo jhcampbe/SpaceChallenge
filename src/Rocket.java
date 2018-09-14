@@ -18,10 +18,10 @@ public class Rocket implements SpaceShip {
     }
 
     public boolean canCarry(Item item) {
-        return this.cargoCarried + item.weight <= cargoLimit;
+        return this.cargoCarried + item.getWeight() <= cargoLimit;
     }
 
     public void carry(Item item){
-        this.cargoCarried += item.weight;
+        this.cargoCarried += item.getWeight();
     }
 }
